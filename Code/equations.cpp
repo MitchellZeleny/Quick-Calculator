@@ -79,7 +79,8 @@ int main()
     
     cout << "Do you need to perform another calculation to " << answer << "?" << endl;
     cout << "Enter 'yes' to continue, enter 0 to quit." << endl;
-    cin >> contCalc
+    cin >> contCalc;
+    
     while (contCalc == "yes")
     {
         cout << "What operation do you need to perform on " << num3 << "?" << endl;
@@ -87,8 +88,8 @@ int main()
         cout << "Enter 2 for subtraction" << endl;
         cout << "Enter 3 for multiplication" << endl;
         cout << "Enter 4 for division" << endl;
-        cout << "Enter 5 for square root of " << num1 << endl;
-        cout << "Enter 6 for " << num1 << " to the power of another number" << endl;
+        cout << "Enter 5 for square root of " << num3 << endl;
+        cout << "Enter 6 for " << num3 << " to the power of another number" << endl;
         cin >> calc;
         
         if (calc == 1)
@@ -149,6 +150,7 @@ int main()
             cout << "Enter the second number you need to raise " << num3 << " to the power of" << endl;
             cin >> num4;
             finalAnswer = pow(num3, num4);
+            num3 = finalAnswer;
             cout << "Your answer is: " << finalAnswer << endl;
             cout << "Do you need to continue calculations on " << finalAnswer << "?" << endl;
             cout << "If so, Enter 'yes' otherwise enter 0" << endl;
