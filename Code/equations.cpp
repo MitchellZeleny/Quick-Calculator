@@ -1,10 +1,10 @@
 #include <iostream>
-#include <strings>
+#include <string>
 #include <cmath>
 
 using namespace std;
 
-int main() 
+int main()
 {
     string contCalc;
     double answer;
@@ -14,7 +14,7 @@ int main()
     double num4;
     int calc;
     double finalAnswer;
-    
+
     cout << "Enter the first number you need to calculate: " << endl;
     cin >> num1;
     cout << "What operation would you like to perform to " << num1 << "?" << endl;
@@ -25,14 +25,14 @@ int main()
     cout << "Enter 5 for square root of " << num1 << endl;
     cout << "Enter 6 for " << num1 << " to the power of another number" << endl;
     cin >> calc;
-    
+
     if (calc == 1)
     {
         cout << "Enter the second number you need to add to " << num1 << endl;
         cin >> num2;
         answer = num1 + num2;
         cout << " Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else if (calc == 2)
     {
@@ -40,7 +40,7 @@ int main()
         cin >> num2;
         answer = num1 - num2;
         cout << " Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else if (calc == 3)
     {
@@ -48,7 +48,7 @@ int main()
         cin >> num2;
         answer = num1 * num2;
         cout << " Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else if (calc == 4)
     {
@@ -56,13 +56,13 @@ int main()
         cin >> num2;
         answer = num1 / num2;
         cout << " Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else if (calc == 5)
     {
         answer = sqrt(num1);
         cout << " Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else if (calc == 6)
     {
@@ -70,17 +70,17 @@ int main()
         cin >> num2;
         answer = pow(num1, num2);
         cout << "Your answer is: " << answer << endl;
-        answer = num3;
+        num3 = answer;
     }
     else
     {
         cout << "Invalid entry, please try again." << endl;
     }
-    
+
     cout << "Do you need to perform another calculation to " << answer << "?" << endl;
     cout << "Enter 'yes' to continue, enter 0 to quit." << endl;
     cin >> contCalc;
-    
+
     while (contCalc == "yes")
     {
         cout << "What operation do you need to perform on " << num3 << "?" << endl;
@@ -91,7 +91,7 @@ int main()
         cout << "Enter 5 for square root of " << num3 << endl;
         cout << "Enter 6 for " << num3 << " to the power of another number" << endl;
         cin >> calc;
-        
+
         if (calc == 1)
         {
             cout << "Enter the second number you need to add to " << num3 << endl;
@@ -100,8 +100,8 @@ int main()
             num3 = finalAnswer;
             cout << " Your answer is: " << finalAnswer << endl;
             cout << "Do you need to continue calculations on " << finalAnswer << "?" << endl;
-            cout << "If so, enter 'yes' otherwise enter 0"  << endl;          
-            cin >> contCalc;            
+            cout << "If so, enter 'yes' otherwise enter 0" << endl;
+            cin >> contCalc;
         }
         else if (calc == 2)
         {
@@ -134,7 +134,7 @@ int main()
             cout << " Your answer is: " << finalAnswer << endl;
             cout << "Do you need to continue calculations on " << finalAnswer << "?" << endl;
             cout << "If so, Enter 'yes' otherwise enter 0" << endl;
-            cin contCalc;
+            cin >> contCalc;
         }
         else if (calc == 5)
         {
